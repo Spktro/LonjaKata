@@ -1,6 +1,6 @@
 
 namespace Model {
-    public class Travel {
+    public class Trip {
         public float Distance { get; set; }
         public Market Market { get; set; }
     }
