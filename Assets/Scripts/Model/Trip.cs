@@ -4,8 +4,15 @@ using System.Collections.Generic;
 namespace Model
 {
     public class Trip {
+
         public float Distance { get; set; }
         public Market Market { get; set; }
+
+        public Trip(float distance, Market market)
+        {
+            Distance = distance;
+            Market = market;
+        }
 
         public decimal CalculateSalePerformance(Seafood seafood, int amount) {
             //TODO
