@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using Model;
@@ -7,41 +8,111 @@ using UnityEngine.TestTools;
 
 public class MarketShould
 {
-    // * Return zero when seafood amount is zero
-    // * Return seafood price when amount is one
-    // * Return seafood times amount acording to given amount   
-    // * Return zero when the market doesnt have seafood passed
-    // * throw an exception when amount is negative
-    // * throw an exception when seafood its null 
+    // * Return zero when seafood amount is zero -
+    // * Return seafood price when amount is one -
+    // * Return seafood times amount according to given amount -
+    // * Return zero when the market doesnt have seafood passed  -
+    // * throw an exception when amount is negative -
+    // * throw an exception when seafood is null -
 
     // A Test behaves as an ordinary method
+    Market marketTest;
+   
+    [SetUp]
+    public void Setup()
+    {
+        GivenATestMarket(); 
+    }
+
+    private void GivenATestMarket()
+    {
+        marketTest = new Market("Madrid");
+        marketTest.AddSeafoodDetail("Vieiras", 500);
+        marketTest.AddSeafoodDetail("Pulpo", 0);
+        marketTest.AddSeafoodDetail("Centollo", 450);       
+    }
+
     [Test]
     public void ReturnZeroWhenSeaFoodAmountIsZero()
     {
-        //given
-        var marketTest = new Market();
-        marketTest.Name = "Test Market";
-        var seafood1 = new Seafood("Vieiras", 500);
-        var seafood2 = new Seafood("Pulpo", 0);
-        var seafood3 = new Seafood("Centollo", 450);
-        marketTest.Seafoods.Add(seafood1);
-        marketTest.Seafoods.Add(seafood2);
-        marketTest.Seafoods.Add(seafood3);
+        //given        
 
-       // var seafood1 = new Seafood("Cangrejos", );
+
+        var seafoodTest = new Seafood("Vieiras");
+        int seafoodAmount = 0;
         //when
-
+        var seafoodRevenue = marketTest.CalculateRevenue(seafoodTest, seafoodAmount);
 
         //then
+        Assert.AreEqual(0, seafoodRevenue);
     }
 
-    // A UnityTest behaves like a coroutine in Play Mode. In Edit Mode you can use
-    // `yield return null;` to skip a frame.
-    [UnityTest]
-    public IEnumerator NewTestScriptWithEnumeratorPasses()
+
+    [Test]
+    public void ReturnSeafoodPriceWhenAmountIsOne()
     {
-        // Use the Assert class to test conditions.
-        // Use yield to skip a frame.
-        yield return null;
+        //given
+
+        var seafoodTest = new Seafood("Vieiras");
+        int seafoodAmount = 1;
+        //when
+        var seafoodRevenue = marketTest.CalculateRevenue(seafoodTest, seafoodAmount);
+        var seafoodMarketPrice = marketTest.GetMarketPrice(seafoodTest);
+
+        //then
+        Assert.AreEqual(seafoodRevenue, seafoodMarketPrice);
     }
+
+    [Test]
+    public void ReturnSeafoodTimesAmountAccordingToGivenAmount()
+    {
+        //Give
+
+        var seafoodTest = new Seafood("Vieiras");
+        int seafoodAmount = 10;
+        //when
+        var seafoodRevenue = marketTest.CalculateRevenue(seafoodTest, seafoodAmount);
+        var seafoodMarketPrice = marketTest.GetMarketPrice(seafoodTest);
+
+        //Then
+        Assert.AreEqual(seafoodRevenue, seafoodMarketPrice * seafoodAmount);
+    }
+
+    [Test]
+    public void ReturnZeroWhenTheMarketDoesntHaveSeafoodPassed()
+    {
+        var seafoodTest = new Seafood("Cornalitos");
+        int seafoodAmount = 10;
+        //when
+        var seafoodRevenue = marketTest.CalculateRevenue(seafoodTest, seafoodAmount);        
+
+        //Then
+        Assert.AreEqual(0, seafoodRevenue);
+    }
+
+
+    [Test]    
+    public void ThrowAnExceptionWhenAmountIsNegative()
+    {
+        var seafoodTest = new Seafood("Cornalitos");
+        int seafoodAmount = 10;
+
+        //when        
+
+        //Then
+        Assert.Throws(typeof(Exception), () => marketTest.CalculateRevenue(seafoodTest, seafoodAmount));
+    }
+
+    [Test]
+    public void ThrowAnExceptionWhenSeafoodIsNull()
+    {
+        
+        int seafoodAmount = 10;
+        //when        
+
+        //Then
+        Assert.Throws(typeof(NullReferenceException), () => marketTest.CalculateRevenue(null, seafoodAmount));
+    }
+
+
 }

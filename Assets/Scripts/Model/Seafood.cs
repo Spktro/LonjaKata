@@ -1,13 +1,12 @@
 
-namespace Model {
+namespace Model
+{
     public class Seafood {
-        public Seafood(string name, float price)
+        public Seafood(string name)
         {
             Name = name;
-            Price = price;
         }
 
-        public string Name { get; set; }
-        public float Price { get; set; }
+        public string Name { get; set; }        
     }
 }
