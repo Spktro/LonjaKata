@@ -9,31 +9,31 @@ using UnityEngine;
 
 namespace Tests
 {
-    public class TripShould
+    public class DestinationShould
     {
 
         // * CalculateSalePerformance equal zero when amount is zero
         // * CalculateSalePerformance when distance greater than zero
-        // * CalculateTripPerformance having 3 different seafood
-        // * CalculateTripPerformance having 3 different seafood, 1 of which is not in the market
+        // * CalculateDestinationPerformance having 3 different seafood
+        // * CalculateDestinationPerformance having 3 different seafood, 1 of which is not in the market
 
 
         Market marketTest;
-        Trip tripTest;
+        Destination destinationTest;
 
         [SetUp]
         public void SetUp()
         {
-            GivenATestMarketAndTrip();
+            GivenATestMarketAndDestination();
         }
 
-        private void GivenATestMarketAndTrip()
+        private void GivenATestMarketAndDestination()
         {
             marketTest = new Market("Madrid");
             marketTest.AddSeafoodDetail("Vieiras", 500);
             marketTest.AddSeafoodDetail("Pulpo", 0);
             marketTest.AddSeafoodDetail("Centollo", 450);
-            tripTest = new Trip(800, marketTest);
+            destinationTest = new Destination(800, marketTest);
         }
 
         [Test]
@@ -44,7 +44,7 @@ namespace Tests
             int amount = 0;
 
             //when
-            var salePerformance = tripTest.CalculateSalePerformance(seafood, amount);
+            var salePerformance = destinationTest.CalculateSalePerformance(seafood, amount);
 
             //then
             Assert.AreEqual(0, salePerformance);
@@ -58,18 +58,18 @@ namespace Tests
             //given
             Seafood seafood = new Seafood("Vieiras");
             int amount = 10;
-            decimal price = tripTest.Market.GetMarketPrice(seafood);
-            float distance = tripTest.Distance;
+            decimal price = destinationTest.Market.GetMarketPrice(seafood);
+            float distance = destinationTest.Distance;
 
             //when
-            var salePerformance = tripTest.CalculateSalePerformance(seafood, amount);
+            var salePerformance = destinationTest.CalculateSalePerformance(seafood, amount);
 
             //then
             Assert.AreEqual(price * amount - price * Convert.ToDecimal(amount * Mathf.Floor(distance / 100) * 0.01f), salePerformance);
         }
 
         [Test]
-        public void CalculateTripPerformanceHaving3DifferentSeafood()
+        public void CalculateDestinationPerformanceHaving3DifferentSeafood()
         {
             //given
             List<Seafood> seafoods = new List<Seafood>()
@@ -79,21 +79,20 @@ namespace Tests
                 new Seafood("Centollo")
             };
             int amount = 10;
-            float distance = tripTest.Distance;
             List<SeafoodStock> seafoodStocks = new List<SeafoodStock>(seafoods.Count);
             seafoods.ForEach(seafood => {
                 seafoodStocks.Add(new SeafoodStock(seafood, amount));
             });
 
             //when
-            var tripPerformance = tripTest.CalculateTripPerformance(seafoodStocks);
+            var DestinationPerformance = destinationTest.CalculateDestinationPerformance(seafoodStocks);
 
             //then
-            Assert.AreEqual(7135 , tripPerformance);
+            Assert.AreEqual(7135 , DestinationPerformance);
         }
 
         [Test]
-        public void CalculateTripPerformanceHaving3DifferentSeafoodBut1SeafoodNotInTheMarket() 
+        public void CalculateDestinationPerformanceHaving3DifferentSeafoodBut1SeafoodNotInTheMarket() 
         {
             //given
             List<Seafood> seafoods = new List<Seafood>()
@@ -103,17 +102,17 @@ namespace Tests
                 new Seafood("Cornalitos")
             };
             int amount = 10;
-            float distance = tripTest.Distance;
+            float distance = destinationTest.Distance;
             List<SeafoodStock> seafoodStocks = new List<SeafoodStock>(seafoods.Count);
             seafoods.ForEach(seafood => {
                 seafoodStocks.Add(new SeafoodStock(seafood, amount));
             });
 
             //when
-            var tripPerformance = tripTest.CalculateTripPerformance(seafoodStocks);
+            var DestinationPerformance = destinationTest.CalculateDestinationPerformance(seafoodStocks);
 
             //then
-            Assert.AreEqual(2995, tripPerformance);
+            Assert.AreEqual(2995, DestinationPerformance);
         }
 
     }

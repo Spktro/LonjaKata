@@ -5,12 +5,12 @@ using UnityEngine;
 
 namespace Model
 {
-    public class Trip {
+    public class Destination {
 
         public float Distance { get; set; }
         public Market Market { get; set; }
 
-        public Trip(float distance, Market market)
+        public Destination(float distance, Market market)
         {
             Distance = distance;
             Market = market;
@@ -21,13 +21,13 @@ namespace Model
             return price * amount - price * Convert.ToDecimal(amount * Mathf.Floor(Distance / 100) * 0.01f);
         }
 
-        public decimal CalculateTripPerformance(List<SeafoodStock> seafoodStocks) {
-            decimal tripPerformance = 0;
+        public decimal CalculateDestinationPerformance(List<SeafoodStock> seafoodStocks) {
+            decimal DestinationPerformance = 0;
             seafoodStocks.ForEach(seafoodStock => {
-                tripPerformance += CalculateSalePerformance(seafoodStock.Seafood, seafoodStock.Amount);
+                DestinationPerformance += CalculateSalePerformance(seafoodStock.Seafood, seafoodStock.Amount);
             });
-            tripPerformance -= 5 + Convert.ToDecimal(2 * Distance);
-            return tripPerformance;
+            DestinationPerformance -= 5 + Convert.ToDecimal(2 * Distance);
+            return DestinationPerformance;
         }
     }
 }
