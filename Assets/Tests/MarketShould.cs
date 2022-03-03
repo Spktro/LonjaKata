@@ -17,7 +17,6 @@ namespace Tests
         // * throw an exception when amount is negative -
         // * throw an exception when seafood is null -
 
-        // A Test behaves as an ordinary method
         Market marketTest;
 
         [SetUp]
