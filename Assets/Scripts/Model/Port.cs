@@ -7,8 +7,18 @@ namespace Model {
         public List<Destination> Destinations { get; set; } = new List<Destination>();
 
         public Market CalculateBestMarketToSell(List<SeafoodStock> seafoodStocks) {
-            //TODO
-            return Destinations[0].Market;
+            decimal bestPerformance = 0, currentPerformance;
+            Destination bestDestination = null;
+
+            Destinations.ForEach(destination => { 
+                currentPerformance = destination.CalculateDestinationPerformance(seafoodStocks);
+                if (currentPerformance > bestPerformance)
+                {
+                    bestPerformance = currentPerformance;
+                    bestDestination = destination;
+                }
+            });
+            return bestDestination?.Market;
         }
     }
 }

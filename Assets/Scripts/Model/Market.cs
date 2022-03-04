@@ -40,5 +40,9 @@ namespace Model {
             else
                 return seafoodDetails.Price;
         }
+
+        public override string ToString() {
+            return Name;
+        }
     }
 }

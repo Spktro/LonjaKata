@@ -17,6 +17,7 @@ namespace Tests
 
         Port portTest;
 
+
         [SetUp]
         public void SetUp()
         {
@@ -73,13 +74,44 @@ namespace Tests
         [Test]
         public void CalculateBestMarketToSell1LoadOfSeafood()
         {
+            //given
+            List<Seafood> seafoods = new List<Seafood>()
+            {
+                new Seafood("Vieiras")
+            };
+            int amount = 10;
+            List<SeafoodStock> seafoodStocks = new List<SeafoodStock>(seafoods.Count);
+            seafoods.ForEach(seafood => {
+                seafoodStocks.Add(new SeafoodStock(seafood, amount));
+            });
 
+            //when
+            Market bestMarket = portTest.CalculateBestMarketToSell(seafoodStocks);
+
+            //then
+            Assert.AreEqual(portTest.Destinations[2].Market , bestMarket);
         }
 
         [Test]
         public void CalculateBestMarketToSell3DifferentLoadOfSeafood()
         {
+            //given
+            List<Seafood> seafoods = new List<Seafood>()
+            {
+                new Seafood("Vieiras"),
+                new Seafood("Pulpo"),
+                new Seafood("Centollo")
+            };
+            List<SeafoodStock> seafoodStocks = new List<SeafoodStock>(seafoods.Count);
+            seafoodStocks.Add(new SeafoodStock(seafoods[0], 50));
+            seafoodStocks.Add(new SeafoodStock(seafoods[1], 100));
+            seafoodStocks.Add(new SeafoodStock(seafoods[2], 50));
 
+            //when
+            Market bestMarket = portTest.CalculateBestMarketToSell(seafoodStocks);
+
+            //then
+            Assert.AreEqual(portTest.Destinations[2].Market, bestMarket);
         }
     }
 }
