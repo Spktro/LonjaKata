@@ -956,6 +956,7 @@ GameObject:
   m_Component:
   - component: {fileID: 6401319092254210459}
   - component: {fileID: 2961097630245993716}
+  - component: {fileID: 7707057239222815110}
   m_Layer: 5
   m_Name: Distances
   m_TagString: Untagged
@@ -970,7 +971,7 @@ RectTransform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 8679933563487786392}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
@@ -1012,6 +1013,22 @@ MonoBehaviour:
   m_ChildScaleWidth: 0
   m_ChildScaleHeight: 0
   m_ReverseArrangement: 0
+--- !u!114 &7707057239222815110
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8679933563487786392}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 23b507349c272014bb077d1353123fae, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  distances:
+  - {fileID: 4082909438573659594}
+  - {fileID: 7188919496784681682}
+  - {fileID: 6689951320594249849}
 --- !u!1 &9016814648280443427
 GameObject:
   m_ObjectHideFlags: 0

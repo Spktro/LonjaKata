@@ -840,7 +840,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   CityName: Madrid
-  Prices:
+  prices:
   - {fileID: 1490734146380574468}
   - {fileID: 789774849745899932}
   - {fileID: 5543403984216216573}
