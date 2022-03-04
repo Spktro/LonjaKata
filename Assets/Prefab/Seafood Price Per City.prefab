@@ -770,6 +770,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1652671026037671874}
   - component: {fileID: 6840774836364002516}
+  - component: {fileID: 5396987559915772466}
   m_Layer: 5
   m_Name: Seafood Price Per City
   m_TagString: Untagged
@@ -826,6 +827,23 @@ MonoBehaviour:
   m_ChildScaleWidth: 0
   m_ChildScaleHeight: 0
   m_ReverseArrangement: 0
+--- !u!114 &5396987559915772466
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6185353830184266506}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 23c04095e6124bd4a8f37fa4ccfc69b0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  CityName: Madrid
+  Prices:
+  - {fileID: 1490734146380574468}
+  - {fileID: 789774849745899932}
+  - {fileID: 5543403984216216573}
 --- !u!1 &6557509894410909677
 GameObject:
   m_ObjectHideFlags: 0
