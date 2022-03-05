@@ -2,5 +2,5 @@
 
 public interface IStockView
 {
-    List<string> Stock { get; }
+    List<float> Stock { get; }
 }

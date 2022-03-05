@@ -7,12 +7,12 @@ public class DistancesView : MonoBehaviour, IDistancesView
 {
     [SerializeField] private InputField[] distances;
 
-    public List<string> Distances
+    public List<float> Distances
     {
         get
         {
             return distances
-                .Select(stockInp => stockInp.text)
+                .Select(stockInp => float.Parse(stockInp.text))
                 .ToList();
         }
     }

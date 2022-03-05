@@ -2,5 +2,5 @@
 
 public interface IDistancesView
 {
-    List<string> Distances { get; }
+    List<float> Distances { get; }
 }

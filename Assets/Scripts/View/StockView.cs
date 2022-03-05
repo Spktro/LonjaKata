@@ -7,12 +7,12 @@ public class StockView : MonoBehaviour, IStockView
 {
     [SerializeField] private InputField[] stock;
 
-    public List<string> Stock
+    public List<float> Stock
     {
         get
         {
             return stock
-                   .Select(stockInp => stockInp.text)
+                   .Select(stockInp => float.Parse(stockInp.text))
                    .ToList();
         }
 

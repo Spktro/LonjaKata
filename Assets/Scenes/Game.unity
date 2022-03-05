@@ -1394,6 +1394,10 @@ PrefabInstance:
       propertyPath: CityName
       value: Lisboa
       objectReference: {fileID: 0}
+    - target: {fileID: 5396987559915772466, guid: f8af7b37a2e1dd44fbc495725fd49146, type: 3}
+      propertyPath: marketName
+      value: Lisboa
+      objectReference: {fileID: 0}
     - target: {fileID: 6185353830184266506, guid: f8af7b37a2e1dd44fbc495725fd49146, type: 3}
       propertyPath: m_Name
       value: Seafood Price Lisboa
@@ -1969,6 +1973,10 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5396987559915772466, guid: f8af7b37a2e1dd44fbc495725fd49146, type: 3}
       propertyPath: CityName
+      value: Barcelona
+      objectReference: {fileID: 0}
+    - target: {fileID: 5396987559915772466, guid: f8af7b37a2e1dd44fbc495725fd49146, type: 3}
+      propertyPath: marketName
       value: Barcelona
       objectReference: {fileID: 0}
     - target: {fileID: 6185353830184266506, guid: f8af7b37a2e1dd44fbc495725fd49146, type: 3}
@@ -2628,6 +2636,10 @@ PrefabInstance:
     - target: {fileID: 4278759765616629770, guid: f8af7b37a2e1dd44fbc495725fd49146, type: 3}
       propertyPath: m_AnchoredPosition.y
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5396987559915772466, guid: f8af7b37a2e1dd44fbc495725fd49146, type: 3}
+      propertyPath: marketName
+      value: Madrid
       objectReference: {fileID: 0}
     - target: {fileID: 6185353830184266506, guid: f8af7b37a2e1dd44fbc495725fd49146, type: 3}
       propertyPath: m_Name

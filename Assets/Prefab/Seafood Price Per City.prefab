@@ -839,11 +839,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 23c04095e6124bd4a8f37fa4ccfc69b0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  CityName: Madrid
-  prices:
-  - {fileID: 1490734146380574468}
-  - {fileID: 789774849745899932}
-  - {fileID: 5543403984216216573}
+  marketName: 
+  marketPrices:
+  - seafoodName: Vieiras
+    price: {fileID: 1490734146380574468}
+  - seafoodName: Pulpo
+    price: {fileID: 789774849745899932}
+  - seafoodName: Centollos
+    price: {fileID: 5543403984216216573}
 --- !u!1 &6557509894410909677
 GameObject:
   m_ObjectHideFlags: 0

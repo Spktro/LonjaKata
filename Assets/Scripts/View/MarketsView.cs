@@ -1,22 +1,22 @@
 ﻿using System.Collections.Generic;
 using System.Linq;
 using UnityEngine;
-using UnityEngine.UI;
 
 public class MarketsView : MonoBehaviour, IMarketsView
 {
-    [SerializeField] private string CityName;
-    [SerializeField] private InputField[] prices;
+    [SerializeField] private string marketName;
+    [SerializeField] private List<MarketPrice> marketPrices;
 
+    public string MarketName  => marketName;
 
-    public List<string> Prices
+    public List<decimal> Prices
     {
         get
         {
-            return prices
-                .Select(stockInp => stockInp.text)
+            return marketPrices
+                .Select(marketPrice => decimal.Parse(marketPrice.Price.text))
                 .ToList();
         }
     }
-}
 
+}
