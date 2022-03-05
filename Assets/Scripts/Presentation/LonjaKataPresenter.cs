@@ -6,12 +6,12 @@ using UnityEngine;
 
 public class LonjaKataPresenter
 {
-    private readonly ILonjaKataView view;
+    private readonly ILonjaKataView lonjaKataView;
     private Port port;
 
     public LonjaKataPresenter(ILonjaKataView view)
     {
-        this.view = view;
+        this.lonjaKataView = view;
 
         LoadData();
     }
@@ -24,28 +24,16 @@ public class LonjaKataPresenter
 
     public void CalculateBestMarket(IDistancesView distancesView, IStockView stockView, List<IMarketsView> marketsViews)
     {
-        Market marketTest1 = new Market("Madrid");
-        marketTest1.AddSeafoodDetail("Vieiras", 500);
-        marketTest1.AddSeafoodDetail("Pulpo", 0);
-        marketTest1.AddSeafoodDetail("Centollo", 450);
-        Market marketTest2 = new Market("Barcelona");
-        marketTest2.AddSeafoodDetail("Vieiras", 450);
-        marketTest2.AddSeafoodDetail("Pulpo", 120);
-        marketTest2.AddSeafoodDetail("Centollo", 450);
-        Market marketTest3 = new Market("Lisboa");
-        marketTest3.AddSeafoodDetail("Vieiras", 600);
-        marketTest3.AddSeafoodDetail("Pulpo", 100);
-        marketTest3.AddSeafoodDetail("Centollo", 500);
-
-        Destination destinationTest1 = new Destination(800, marketTest1);
-        Destination destinationTest2 = new Destination(1100, marketTest2);
-        Destination destinationTest3 = new Destination(600, marketTest3);
+       
 
         List<Market> markets = new List<Market>(3);
         Market newMarket;
         marketsViews.ForEach(marketView => {
             newMarket = new Market(marketView.MarketName);
-            //TODO
+            marketView.MarketPriceDTOs.ForEach(marketPriceDTO =>{
+                newMarket.AddSeafoodDetail(marketPriceDTO.SeafoodNames, marketPriceDTO.Price);
+            });
+            
             markets.Add(newMarket); 
         });
 
@@ -55,5 +43,12 @@ public class LonjaKataPresenter
             port.Destinations.Add(newDestination);
         }
 
+        List<SeafoodStock> seafoodStock = new List<SeafoodStock>(3);
+
+           stockView.SeafoodStockDTOs.ForEach(seafoodStockDTO => {
+               seafoodStock.Add(SeafoodStockDTOAdapter.SeafoodStockDTOToSeafoodStock(seafoodStockDTO));
+           });        
+        var bestMarketPerformance = port.CalculateBestMarketToSell(seafoodStock);
+        lonjaKataView.UpdateBestMarketTxt(bestMarketPerformance.Item1.Name, bestMarketPerformance.Item2);
     }
 }

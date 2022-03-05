@@ -284,7 +284,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 20887067}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 56844995}
+        m_TargetAssemblyTypeName: LonjaKataView, View
+        m_MethodName: OnCalculateButtonClicked
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &20887067
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -420,6 +432,7 @@ MonoBehaviour:
   - {fileID: 1338975879700135687}
   - {fileID: 1494028172}
   - {fileID: 793303126}
+  bestMarketTxt: {fileID: 1779882677}
 --- !u!1 &66427315
 GameObject:
   m_ObjectHideFlags: 0
@@ -655,7 +668,7 @@ GameObject:
   - component: {fileID: 231668536}
   - component: {fileID: 231668537}
   m_Layer: 5
-  m_Name: Locations
+  m_Name: Seafood
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -722,7 +735,7 @@ GameObject:
   - component: {fileID: 376642479}
   - component: {fileID: 376642478}
   m_Layer: 5
-  m_Name: Location 1 Txt
+  m_Name: Seafood 1 Txt
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -780,7 +793,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: Madrid
+  m_Text: Vieiras
 --- !u!222 &376642479
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -924,7 +937,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: Button
+  m_Text: Calculate best market
 --- !u!222 &482256870
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -1254,6 +1267,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 145563703}
     m_Modifications:
+    - target: {fileID: 789774849745899932, guid: f8af7b37a2e1dd44fbc495725fd49146, type: 3}
+      propertyPath: m_Text
+      value: 100
+      objectReference: {fileID: 0}
     - target: {fileID: 1194606691517148643, guid: f8af7b37a2e1dd44fbc495725fd49146, type: 3}
       propertyPath: m_AnchorMax.y
       value: 0
@@ -1269,6 +1286,10 @@ PrefabInstance:
     - target: {fileID: 1194606691517148643, guid: f8af7b37a2e1dd44fbc495725fd49146, type: 3}
       propertyPath: m_AnchoredPosition.y
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1490734146380574468, guid: f8af7b37a2e1dd44fbc495725fd49146, type: 3}
+      propertyPath: m_Text
+      value: 600
       objectReference: {fileID: 0}
     - target: {fileID: 1652671026037671874, guid: f8af7b37a2e1dd44fbc495725fd49146, type: 3}
       propertyPath: m_Pivot.x
@@ -1370,6 +1391,14 @@ PrefabInstance:
       propertyPath: m_AnchoredPosition.y
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 2545599247213395815, guid: f8af7b37a2e1dd44fbc495725fd49146, type: 3}
+      propertyPath: m_Text
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3371508877151380428, guid: f8af7b37a2e1dd44fbc495725fd49146, type: 3}
+      propertyPath: m_Text
+      value: 500
+      objectReference: {fileID: 0}
     - target: {fileID: 4278759765616629770, guid: f8af7b37a2e1dd44fbc495725fd49146, type: 3}
       propertyPath: m_AnchorMax.y
       value: 0
@@ -1386,9 +1415,13 @@ PrefabInstance:
       propertyPath: m_AnchoredPosition.y
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 4458819625494594488, guid: f8af7b37a2e1dd44fbc495725fd49146, type: 3}
+      propertyPath: m_Text
+      value: 450
+      objectReference: {fileID: 0}
     - target: {fileID: 5083089519215809135, guid: f8af7b37a2e1dd44fbc495725fd49146, type: 3}
       propertyPath: m_Text
-      value: Centollos
+      value: Lisboa
       objectReference: {fileID: 0}
     - target: {fileID: 5396987559915772466, guid: f8af7b37a2e1dd44fbc495725fd49146, type: 3}
       propertyPath: CityName
@@ -1398,9 +1431,25 @@ PrefabInstance:
       propertyPath: marketName
       value: Lisboa
       objectReference: {fileID: 0}
+    - target: {fileID: 5543403984216216573, guid: f8af7b37a2e1dd44fbc495725fd49146, type: 3}
+      propertyPath: m_Text
+      value: 500
+      objectReference: {fileID: 0}
+    - target: {fileID: 5790178511158380345, guid: f8af7b37a2e1dd44fbc495725fd49146, type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5907590564387742992, guid: f8af7b37a2e1dd44fbc495725fd49146, type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 6185353830184266506, guid: f8af7b37a2e1dd44fbc495725fd49146, type: 3}
       propertyPath: m_Name
-      value: Seafood Price Lisboa
+      value: Location Lisboa
+      objectReference: {fileID: 0}
+    - target: {fileID: 7493022828494983968, guid: f8af7b37a2e1dd44fbc495725fd49146, type: 3}
+      propertyPath: m_Enabled
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 7652417619637002145, guid: f8af7b37a2e1dd44fbc495725fd49146, type: 3}
       propertyPath: m_AnchorMax.y
@@ -1548,7 +1597,7 @@ GameObject:
   - component: {fileID: 1180872684}
   - component: {fileID: 1180872683}
   m_Layer: 5
-  m_Name: Location 3 Txt
+  m_Name: seafood 3 Txt
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1606,7 +1655,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: Lisboa
+  m_Text: Centollo
 --- !u!222 &1180872684
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -1833,6 +1882,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 145563703}
     m_Modifications:
+    - target: {fileID: 789774849745899932, guid: f8af7b37a2e1dd44fbc495725fd49146, type: 3}
+      propertyPath: m_Text
+      value: 120
+      objectReference: {fileID: 0}
     - target: {fileID: 1194606691517148643, guid: f8af7b37a2e1dd44fbc495725fd49146, type: 3}
       propertyPath: m_AnchorMax.y
       value: 0
@@ -1848,6 +1901,10 @@ PrefabInstance:
     - target: {fileID: 1194606691517148643, guid: f8af7b37a2e1dd44fbc495725fd49146, type: 3}
       propertyPath: m_AnchoredPosition.y
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1490734146380574468, guid: f8af7b37a2e1dd44fbc495725fd49146, type: 3}
+      propertyPath: m_Text
+      value: 450
       objectReference: {fileID: 0}
     - target: {fileID: 1652671026037671874, guid: f8af7b37a2e1dd44fbc495725fd49146, type: 3}
       propertyPath: m_Pivot.x
@@ -1949,6 +2006,14 @@ PrefabInstance:
       propertyPath: m_AnchoredPosition.y
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 2545599247213395815, guid: f8af7b37a2e1dd44fbc495725fd49146, type: 3}
+      propertyPath: m_Text
+      value: 120
+      objectReference: {fileID: 0}
+    - target: {fileID: 3371508877151380428, guid: f8af7b37a2e1dd44fbc495725fd49146, type: 3}
+      propertyPath: m_Text
+      value: 100
+      objectReference: {fileID: 0}
     - target: {fileID: 4278759765616629770, guid: f8af7b37a2e1dd44fbc495725fd49146, type: 3}
       propertyPath: m_AnchorMax.y
       value: 0
@@ -1965,9 +2030,13 @@ PrefabInstance:
       propertyPath: m_AnchoredPosition.y
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 4458819625494594488, guid: f8af7b37a2e1dd44fbc495725fd49146, type: 3}
+      propertyPath: m_Text
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 5083089519215809135, guid: f8af7b37a2e1dd44fbc495725fd49146, type: 3}
       propertyPath: m_Text
-      value: 'Pulpo
+      value: 'Barcelona
 
 '
       objectReference: {fileID: 0}
@@ -1979,9 +2048,25 @@ PrefabInstance:
       propertyPath: marketName
       value: Barcelona
       objectReference: {fileID: 0}
+    - target: {fileID: 5543403984216216573, guid: f8af7b37a2e1dd44fbc495725fd49146, type: 3}
+      propertyPath: m_Text
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5790178511158380345, guid: f8af7b37a2e1dd44fbc495725fd49146, type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5907590564387742992, guid: f8af7b37a2e1dd44fbc495725fd49146, type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 6185353830184266506, guid: f8af7b37a2e1dd44fbc495725fd49146, type: 3}
       propertyPath: m_Name
-      value: Seafood Price Barcelona
+      value: Location Barcelona
+      objectReference: {fileID: 0}
+    - target: {fileID: 7493022828494983968, guid: f8af7b37a2e1dd44fbc495725fd49146, type: 3}
+      propertyPath: m_Enabled
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 7652417619637002145, guid: f8af7b37a2e1dd44fbc495725fd49146, type: 3}
       propertyPath: m_AnchorMax.y
@@ -2286,7 +2371,7 @@ GameObject:
   - component: {fileID: 1994725899}
   - component: {fileID: 1994725898}
   m_Layer: 5
-  m_Name: Location 2 Txt
+  m_Name: Seafood 2 Txt
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -2344,7 +2429,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: Barcelona
+  m_Text: Pulpo
 --- !u!222 &1994725899
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -2505,6 +2590,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 145563703}
     m_Modifications:
+    - target: {fileID: 789774849745899932, guid: f8af7b37a2e1dd44fbc495725fd49146, type: 3}
+      propertyPath: m_Text
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 1194606691517148643, guid: f8af7b37a2e1dd44fbc495725fd49146, type: 3}
       propertyPath: m_AnchorMax.y
       value: 0
@@ -2520,6 +2609,10 @@ PrefabInstance:
     - target: {fileID: 1194606691517148643, guid: f8af7b37a2e1dd44fbc495725fd49146, type: 3}
       propertyPath: m_AnchoredPosition.y
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1490734146380574468, guid: f8af7b37a2e1dd44fbc495725fd49146, type: 3}
+      propertyPath: m_Text
+      value: 500
       objectReference: {fileID: 0}
     - target: {fileID: 1652671026037671874, guid: f8af7b37a2e1dd44fbc495725fd49146, type: 3}
       propertyPath: m_Pivot.x
@@ -2621,6 +2714,14 @@ PrefabInstance:
       propertyPath: m_AnchoredPosition.y
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 2545599247213395815, guid: f8af7b37a2e1dd44fbc495725fd49146, type: 3}
+      propertyPath: m_Text
+      value: 450
+      objectReference: {fileID: 0}
+    - target: {fileID: 3371508877151380428, guid: f8af7b37a2e1dd44fbc495725fd49146, type: 3}
+      propertyPath: m_Text
+      value: 600
+      objectReference: {fileID: 0}
     - target: {fileID: 4278759765616629770, guid: f8af7b37a2e1dd44fbc495725fd49146, type: 3}
       propertyPath: m_AnchorMax.y
       value: 0
@@ -2637,13 +2738,37 @@ PrefabInstance:
       propertyPath: m_AnchoredPosition.y
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 4458819625494594488, guid: f8af7b37a2e1dd44fbc495725fd49146, type: 3}
+      propertyPath: m_Text
+      value: 500
+      objectReference: {fileID: 0}
+    - target: {fileID: 5083089519215809135, guid: f8af7b37a2e1dd44fbc495725fd49146, type: 3}
+      propertyPath: m_Text
+      value: Madrid
+      objectReference: {fileID: 0}
     - target: {fileID: 5396987559915772466, guid: f8af7b37a2e1dd44fbc495725fd49146, type: 3}
       propertyPath: marketName
       value: Madrid
       objectReference: {fileID: 0}
+    - target: {fileID: 5543403984216216573, guid: f8af7b37a2e1dd44fbc495725fd49146, type: 3}
+      propertyPath: m_Text
+      value: 450
+      objectReference: {fileID: 0}
+    - target: {fileID: 5790178511158380345, guid: f8af7b37a2e1dd44fbc495725fd49146, type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5907590564387742992, guid: f8af7b37a2e1dd44fbc495725fd49146, type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 6185353830184266506, guid: f8af7b37a2e1dd44fbc495725fd49146, type: 3}
       propertyPath: m_Name
-      value: Seafood Price Madrid
+      value: Location Madrid
+      objectReference: {fileID: 0}
+    - target: {fileID: 7493022828494983968, guid: f8af7b37a2e1dd44fbc495725fd49146, type: 3}
+      propertyPath: m_Enabled
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 7652417619637002145, guid: f8af7b37a2e1dd44fbc495725fd49146, type: 3}
       propertyPath: m_AnchorMax.y
@@ -2707,6 +2832,10 @@ PrefabInstance:
       propertyPath: m_AnchoredPosition.y
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 783310274761520482, guid: 490e7557eaec1834dbc47d48eee9d526, type: 3}
+      propertyPath: m_Text
+      value: 50
+      objectReference: {fileID: 0}
     - target: {fileID: 1071740167158690944, guid: 490e7557eaec1834dbc47d48eee9d526, type: 3}
       propertyPath: m_Pivot.x
       value: 0.5
@@ -2807,9 +2936,37 @@ PrefabInstance:
       propertyPath: m_AnchoredPosition.y
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 3309857167976158071, guid: 490e7557eaec1834dbc47d48eee9d526, type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 3349774714998364291, guid: 490e7557eaec1834dbc47d48eee9d526, type: 3}
       propertyPath: m_Name
       value: Stock
+      objectReference: {fileID: 0}
+    - target: {fileID: 3876957151826352073, guid: 490e7557eaec1834dbc47d48eee9d526, type: 3}
+      propertyPath: m_Text
+      value: 100
+      objectReference: {fileID: 0}
+    - target: {fileID: 3934061155280851411, guid: 490e7557eaec1834dbc47d48eee9d526, type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5488370696430053570, guid: 490e7557eaec1834dbc47d48eee9d526, type: 3}
+      propertyPath: seafoodName.Array.size
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 5488370696430053570, guid: 490e7557eaec1834dbc47d48eee9d526, type: 3}
+      propertyPath: seafoodName.Array.data[0]
+      value: Vieiras
+      objectReference: {fileID: 0}
+    - target: {fileID: 5488370696430053570, guid: 490e7557eaec1834dbc47d48eee9d526, type: 3}
+      propertyPath: seafoodName.Array.data[1]
+      value: Pulpo
+      objectReference: {fileID: 0}
+    - target: {fileID: 5488370696430053570, guid: 490e7557eaec1834dbc47d48eee9d526, type: 3}
+      propertyPath: seafoodName.Array.data[2]
+      value: Centollos
       objectReference: {fileID: 0}
     - target: {fileID: 7617458684581226708, guid: 490e7557eaec1834dbc47d48eee9d526, type: 3}
       propertyPath: m_AnchorMax.y
@@ -2825,6 +2982,14 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7617458684581226708, guid: 490e7557eaec1834dbc47d48eee9d526, type: 3}
       propertyPath: m_AnchoredPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7971638848607996113, guid: 490e7557eaec1834dbc47d48eee9d526, type: 3}
+      propertyPath: m_Text
+      value: 50
+      objectReference: {fileID: 0}
+    - target: {fileID: 8176628464225672391, guid: 490e7557eaec1834dbc47d48eee9d526, type: 3}
+      propertyPath: m_Enabled
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 8919541985074246814, guid: 490e7557eaec1834dbc47d48eee9d526, type: 3}
@@ -2863,6 +3028,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 408874150}
     m_Modifications:
+    - target: {fileID: 2841951172438970844, guid: c831dc52e4679ef4288f9b2b827d73fc, type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 3296933865334405509, guid: c831dc52e4679ef4288f9b2b827d73fc, type: 3}
       propertyPath: m_AnchorMax.y
       value: 0
@@ -2878,6 +3047,10 @@ PrefabInstance:
     - target: {fileID: 3296933865334405509, guid: c831dc52e4679ef4288f9b2b827d73fc, type: 3}
       propertyPath: m_AnchoredPosition.y
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4082909438573659594, guid: c831dc52e4679ef4288f9b2b827d73fc, type: 3}
+      propertyPath: m_Text
+      value: 800
       objectReference: {fileID: 0}
     - target: {fileID: 4593457885183452623, guid: c831dc52e4679ef4288f9b2b827d73fc, type: 3}
       propertyPath: m_AnchorMax.y
@@ -2995,6 +3168,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 6689951320594249849, guid: c831dc52e4679ef4288f9b2b827d73fc, type: 3}
+      propertyPath: m_Text
+      value: 600
+      objectReference: {fileID: 0}
     - target: {fileID: 6836082673485890155, guid: c831dc52e4679ef4288f9b2b827d73fc, type: 3}
       propertyPath: m_AnchorMax.y
       value: 0
@@ -3011,9 +3188,21 @@ PrefabInstance:
       propertyPath: m_AnchoredPosition.y
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 6958356138460159176, guid: c831dc52e4679ef4288f9b2b827d73fc, type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7188919496784681682, guid: c831dc52e4679ef4288f9b2b827d73fc, type: 3}
+      propertyPath: m_Text
+      value: 110
+      objectReference: {fileID: 0}
     - target: {fileID: 8679933563487786392, guid: c831dc52e4679ef4288f9b2b827d73fc, type: 3}
       propertyPath: m_Name
       value: Distances
+      objectReference: {fileID: 0}
+    - target: {fileID: 8928212823415316076, guid: c831dc52e4679ef4288f9b2b827d73fc, type: 3}
+      propertyPath: m_Enabled
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: c831dc52e4679ef4288f9b2b827d73fc, type: 3}

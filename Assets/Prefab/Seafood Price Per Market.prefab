@@ -92,7 +92,7 @@ GameObject:
   - component: {fileID: 4710644968729626489}
   - component: {fileID: 5543403984216216573}
   m_Layer: 5
-  m_Name: Location 3 Distance Inp
+  m_Name: Seafood 3 Price Inp
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -472,7 +472,7 @@ GameObject:
   - component: {fileID: 5934244056460769737}
   - component: {fileID: 789774849745899932}
   m_Layer: 5
-  m_Name: Location 2 Distance Inp
+  m_Name: Seafood 2 Price Inp
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -614,7 +614,7 @@ GameObject:
   - component: {fileID: 2691445325326156449}
   - component: {fileID: 5083089519215809135}
   m_Layer: 5
-  m_Name: Seafood Txt
+  m_Name: Market Txt
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -772,7 +772,7 @@ GameObject:
   - component: {fileID: 6840774836364002516}
   - component: {fileID: 5396987559915772466}
   m_Layer: 5
-  m_Name: Seafood Price Per City
+  m_Name: Seafood Price Per Market
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -939,7 +939,7 @@ GameObject:
   - component: {fileID: 5282855712354928059}
   - component: {fileID: 1490734146380574468}
   m_Layer: 5
-  m_Name: Location 1 Distance Inp
+  m_Name: Seafood 1 Price Inp
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

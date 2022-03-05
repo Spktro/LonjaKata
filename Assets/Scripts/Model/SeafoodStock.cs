@@ -3,11 +3,11 @@
     public class SeafoodStock
     {
         public Seafood Seafood { get; set; }
-        public int Amount { get; set; }
+        public float KilosSupplies { get; set; }
 
-        public SeafoodStock(Seafood seafood, int amount) {
+        public SeafoodStock(Seafood seafood, float kilosSupplies) {
             this.Seafood = seafood;
-            this.Amount = amount;
+            this.KilosSupplies = kilosSupplies;
         }
     }
 }

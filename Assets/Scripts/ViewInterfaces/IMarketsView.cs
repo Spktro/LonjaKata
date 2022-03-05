@@ -3,5 +3,5 @@
 public interface IMarketsView
 {
     string MarketName { get; }
-    List<decimal> Prices { get; }
+    List<MarketPriceDTO> MarketPriceDTOs { get; }
 }

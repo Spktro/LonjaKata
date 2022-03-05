@@ -6,7 +6,7 @@ namespace Model {
         public string Name { get; set; }
         public List<Destination> Destinations { get; set; } = new List<Destination>();
 
-        public Market CalculateBestMarketToSell(List<SeafoodStock> seafoodStocks) {
+        public (Market,decimal) CalculateBestMarketToSell(List<SeafoodStock> seafoodStocks) {
             decimal bestPerformance = 0, currentPerformance;
             Destination bestDestination = null;
 
@@ -18,7 +18,7 @@ namespace Model {
                     bestDestination = destination;
                 }
             });
-            return bestDestination?.Market;
+            return (bestDestination?.Market, bestPerformance);
         }
     }
 }

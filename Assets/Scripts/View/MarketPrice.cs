@@ -5,7 +5,14 @@ using UnityEngine.UI;
 public class MarketPrice {
     [SerializeField] private string seafoodName;
     public string SeafoodNames => seafoodName;
+    
     [SerializeField] private InputField price;
-    public InputField Price => price;
+    public decimal Price => decimal.Parse(price.text);
+
+    
 }
+
+
+
+
 

@@ -1,5 +1,5 @@
 ﻿public interface ILonjaKataView
 {
     void OnCalculateButtonClicked();
-    void UpdateBestMarketTxt();
+    void UpdateBestMarketTxt(string marketName, decimal marketPerformance);
 }

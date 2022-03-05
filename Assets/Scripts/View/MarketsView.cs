@@ -9,12 +9,12 @@ public class MarketsView : MonoBehaviour, IMarketsView
 
     public string MarketName  => marketName;
 
-    public List<decimal> Prices
+    public List<MarketPriceDTO> MarketPriceDTOs
     {
         get
-        {
+        {            
             return marketPrices
-                .Select(marketPrice => decimal.Parse(marketPrice.Price.text))
+                .Select(marketPrice => new MarketPriceDTO(marketPrice.SeafoodNames, marketPrice.Price))
                 .ToList();
         }
     }

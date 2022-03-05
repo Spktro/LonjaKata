@@ -6,6 +6,7 @@ using UnityEngine.UI;
 public class StockView : MonoBehaviour, IStockView
 {
     [SerializeField] private InputField[] stock;
+    [SerializeField] private string[] seafoodName;
 
     public List<float> Stock
     {
@@ -18,5 +19,15 @@ public class StockView : MonoBehaviour, IStockView
 
     }
 
+    public List<SeafoodStockDTO> SeafoodStockDTOs
+    {
+        get {
+
+            int i = 0;
+            return stock
+                   .Select(stockInp => new SeafoodStockDTO(seafoodName[i++], float.Parse(stockInp.text)))
+                   .ToList();
+        }
+    }
 }
 

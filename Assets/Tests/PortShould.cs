@@ -65,7 +65,7 @@ namespace Tests
             });
 
             //when
-            Market bestMarket = portTest.CalculateBestMarketToSell(seafoodStocks);
+            var bestMarket = portTest.CalculateBestMarketToSell(seafoodStocks).Item1;
 
             //then
             Assert.AreEqual(null, bestMarket);
@@ -86,7 +86,7 @@ namespace Tests
             });
 
             //when
-            Market bestMarket = portTest.CalculateBestMarketToSell(seafoodStocks);
+            Market bestMarket = portTest.CalculateBestMarketToSell(seafoodStocks).Item1;
 
             //then
             Assert.AreEqual(portTest.Destinations[2].Market , bestMarket);
@@ -108,7 +108,7 @@ namespace Tests
             seafoodStocks.Add(new SeafoodStock(seafoods[2], 50));
 
             //when
-            Market bestMarket = portTest.CalculateBestMarketToSell(seafoodStocks);
+            Market bestMarket = portTest.CalculateBestMarketToSell(seafoodStocks).Item1;
 
             //then
             Assert.AreEqual(portTest.Destinations[2].Market, bestMarket);

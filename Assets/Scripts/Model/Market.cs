@@ -33,7 +33,7 @@ namespace Model {
         }
 
         public decimal GetMarketPrice(Seafood seafood)
-        {           
+            {           
             var seafoodDetails = SeafoodDetails.Where(detail => detail.Seafood.Name == seafood.Name).SingleOrDefault();
             if (seafoodDetails is null)
                 return 0;

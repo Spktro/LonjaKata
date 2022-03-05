@@ -1,6 +1,6 @@
 ﻿using System.Collections.Generic;
 
 public interface IStockView
-{
-    List<float> Stock { get; }
+{  
+    List<SeafoodStockDTO> SeafoodStockDTOs { get; }
 }
