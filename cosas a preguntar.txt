@@ -1,0 +1,2 @@
+hay tests que son de integración, que se podrían convertir en test unitarios con mocks
+usar tupla cuando se requiere devolver 2 valores
